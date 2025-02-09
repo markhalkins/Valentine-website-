@@ -53,3 +53,28 @@
 
 </body>
 </html>
+        <h2>Will you be my Valentine?</h2>
+        <div class="buttons">
+            <button id="yesButton">Yes</button>
+            <button id="noButton">No</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("yesButton").addEventListener("click", function() {
+            alert("Yay! ❤️ See you on Valentine's Day!");
+            window.location.href = "yes_page.html"; // Redirect to a yes page
+        });
+
+        document.getElementById("noButton").addEventListener("mouseover", function() {
+            let noButton = document.getElementById("noButton");
+            let randomX = Math.random() * (window.innerWidth - 100);
+            let randomY = Math.random() * (window.innerHeight - 50);
+            noButton.style.position = "absolute";
+            noButton.style.left = randomX + "px";
+            noButton.style.top = randomY + "px";
+        });
+    </script>
+
+</body>
+</html>
